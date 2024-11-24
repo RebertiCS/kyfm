@@ -1,0 +1,39 @@
+Change Log
+v1.3
+
+  Clear source code interface (with the source code rewrinten from scrath)
+  ADDED:
+    
+      Arch Linux PKGBUILD
+      File counter
+      Ranger like path
+    
+  
+  FIXES:
+    
+      Buffer overflow in display.c
+      Limited ammount of files that could be read form directories
+      Wrong colors in the preview display
+      File deletion now uses the standard POSIX remove function (also remove fork)
+      Changing sys/types.h to limits.h for better portability (dir.c)
+    
+  
+  Removed old packaging script.
+
+v1.1
+
+  License
+  ADDED:
+    
+      Show hidden files
+      Packages creator script
+      New way to hanlde clippboards
+      Fixed hidden/show files
+      Clear code base
+    
+  
+
+v1.0
+
+  Better Makefile
+  Removed libmagic based file opener

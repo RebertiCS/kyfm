@@ -1,0 +1,16 @@
+image: "archlinux:latest"
+
+before_script:
+  - pacman --noconfirm -Syu ncurses make gcc valgrind bash git sudo fakeroot
+
+Building:
+  script:
+  - make clean
+  - make DEBUG=1
+  
+Packaging:
+  script:
+  - useradd builder
+  - sudo -u builder git clone https://aur.archlinux.org/kyfm-git.git
+  - cd kyfm-git
+  - sudo -u builder makepkg

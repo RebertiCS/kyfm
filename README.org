@@ -1,0 +1,44 @@
+* Yet Another File Manager
+KYFM(KysuYami File Manager) is an filemanager meant to be used within terminals and has the interface
+made with ncurses. The focus is of this project is to developt an file manager with the suckless
+philosophy in mind, that leads to only implement features that are needed.
+      
+[[file:./preview.png]]
+
+** Features
+- Previewing directories
+- File managemnt
+  + Copy
+  + Cut
+  + Paste
+  + Delete
+** Install
+#+BEGIN_SRC sh
+make
+sudo make install
+#or
+make install DESTDIR=~/.local/bin/
+#+END_SRC
+
+You can create an debug build with:
+#+BEGIN_SRC sh
+make DEBUG=1
+#+END_SRC
+*** Packages
+[[https://aur.archlinux.org/packages/kyfm-git/][Arch Linux]]
+** Keybinds
+|---------+-----------------------|
+| Key     | Action                |
+|---------+-----------------------|
+| =k=     | Up                    |
+| =j=     | Down                  |
+| =h=     | Left                  |
+| =l=     | Right                 |
+| =g=     | Move curson to top    |
+| =G=     | Move curson to bottom |
+| =z=     | Hidde/Show dot files  |
+| =space= | Mark Files            |
+| =y=     | Yank                  |
+| =d=     | cut                   |
+| =D=     | delete                |
+|---------+-----------------------|
